@@ -1,0 +1,29 @@
+.about-section {
+    background-color: $bg-color-light;
+    padding: 15rem 0;
+    transform: translateY(-16vh);
+}
+
+.features-section {
+    background-image: linear-gradient(
+            to right,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)
+        ),
+        url("../img/nat-4.jpg");
+    background-size: cover;
+    padding: 12rem 0;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    transform: skewY(-5.5deg) translateY(-5rem);
+    & > * {
+        transform: skewY(5.5deg);
+    }
+}
+
+.tours-section {
+    background-color: $bg-color-light;
+    padding: 15rem 0;
+    transform: translateY(-9rem);
+}

@@ -1,0 +1,14 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin btn-click-effect {
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 0.3rem 0.625rem rgba(0, 0, 0, 0.2);
+    }
+}

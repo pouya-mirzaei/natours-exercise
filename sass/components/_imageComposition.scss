@@ -1,0 +1,31 @@
+.image-composition {
+    transform: translateY(-2rem);
+    position: relative;
+
+    &__image {
+        border-radius: 10px;
+        position: absolute;
+        width: 50%;
+        z-index: 1;
+        transition: all 0.2s;
+        &:nth-child(1) {
+            top: -2rem;
+        }
+        &:nth-child(2) {
+            right: 0.5rem;
+            top: 0.5rem;
+        }
+        &:nth-child(3) {
+            left: 20%;
+            top: 6rem;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            z-index: 2;
+        }
+    }
+    &:hover &__image:not(:hover) {
+        transform: scale(0.95);
+    }
+}

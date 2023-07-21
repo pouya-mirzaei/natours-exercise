@@ -1,0 +1,41 @@
+.row {
+    max-width: 72.5rem;
+    margin: 0 auto;
+
+    @include clearfix;
+
+    &:not(:last-child) {
+        margin-bottom: $vertical-gap;
+    }
+
+    .grid__column {
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $horizontal-gap;
+        }
+    }
+
+    .column-1-of-2 {
+        width: calc((100% - #{$horizontal-gap}) / 2);
+    }
+
+    .column-1-of-3 {
+        width: calc((100% - 2 *#{$horizontal-gap}) / 3);
+    }
+    .column-2-of-3 {
+        width: calc(100% - (#{$horizontal-gap} + (100% - 2 * (#{$horizontal-gap})) / 3));
+    }
+
+    .column-1-of-4 {
+        width: calc((100% - 3 *#{$horizontal-gap}) / 4);
+    }
+
+    .column-2-of-4 {
+        width: calc(100% - ((2 * (100% - 3 *#{$horizontal-gap}) / 4) + (2 *#{$horizontal-gap})));
+    }
+
+    .column-3-of-4 {
+        width: calc(100% - (((100% - 3 *#{$horizontal-gap}) / 4) + (#{$horizontal-gap})));
+    }
+}

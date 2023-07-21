@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    padding: 1.25rem;
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: $text-color-gray;
+    box-sizing: border-box;
+}
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 48;
+}
