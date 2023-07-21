@@ -1,4 +1,4 @@
 node_modules
 package-lock.json
-img/*.mp4
-img/*.webm
+img/video.mp4
+img/video.webm
