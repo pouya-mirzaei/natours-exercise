@@ -16,7 +16,7 @@
     position: relative;
     z-index: 2;
     text-align: center;
-    transform: skewY(-5.5deg) translateY(-5rem);
+    transform: skewY(-5.5deg) translateY(-10rem);
     & > * {
         transform: skewY(5.5deg);
     }
@@ -24,6 +24,13 @@
 
 .tours-section {
     background-color: $bg-color-light;
-    padding: 15rem 0;
-    transform: translateY(-9rem);
+    padding: 8rem 0;
+    transform: translateY(-14rem);
+    z-index: 20;
+}
+
+.stories-section {
+    position: relative;
+    padding: 8rem 0;
+    margin-top: -14rem;
 }

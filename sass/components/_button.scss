@@ -67,12 +67,12 @@
     color: $color-primary-dark;
     border-bottom: 1px solid $color-primary-dark;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s;
 
     &:hover {
         color: $color-white;
         background-color: $color-primary-medium;
-        transform: translateY(-5px);
+        transform: translateY(-3px);
         box-shadow: $btn-boxshadow-value;
     }
 
