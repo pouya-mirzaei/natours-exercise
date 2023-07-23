@@ -127,9 +127,12 @@ body {
   margin-top: 1rem; }
 
 .u-margin-top-medium {
-  margin-top: 4rem; }
+  margin-top: 2rem; }
 
 .u-margin-top-big {
+  margin-top: 4rem; }
+
+.u-margin-top-huge {
   margin-top: 10.5rem; }
 
 .btn {
@@ -161,7 +164,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: all 0.2s; }
+    transition: all 0.3s; }
   .btn--animated {
     animation: bottom-to-top 1s ease-out 0.5s;
     animation-fill-mode: backwards; }
@@ -362,6 +365,62 @@ body {
     height: 100%;
     object-fit: cover; }
 
+.booking {
+  height: 33rem;
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden; }
+  .booking__bg-img {
+    position: absolute;
+    inset: 0;
+    background-image: url("../img/nat-10.jpg");
+    background-size: cover;
+    width: 100%;
+    z-index: 2; }
+  .booking__info {
+    position: absolute;
+    inset: 0;
+    width: 55%;
+    z-index: 3;
+    padding: 5rem 4rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%); }
+
+.form__group {
+  position: relative; }
+  .form__group:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.form__text-input {
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  width: 80%;
+  padding: 1rem 1.2rem;
+  border-bottom: 3px solid #fff;
+  border-top: 3px solid #fff;
+  transition: all 0.5s; }
+  .form__text-input:focus {
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2); }
+  .form__text-input:not(:placeholder-shown) + label {
+    top: 120%; }
+  .form__text-input:focus:invalid {
+    border-bottom: 3px solid #ff7730; }
+  .form__text-input:focus:valid {
+    border-bottom: 3px solid #7ed56f; }
+  .form__text-input::-webkit-input-placeholder {
+    color: #999; }
+
+.form label {
+  position: absolute;
+  left: 5%;
+  z-index: -5;
+  top: 25%;
+  font-size: 0.7rem;
+  font-weight: 600;
+  transition: all 0.2s; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
@@ -436,3 +495,7 @@ body {
   position: relative;
   padding: 8rem 0;
   margin-top: -14rem; }
+
+.booking-section {
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+  padding: 10rem 4.5rem; }

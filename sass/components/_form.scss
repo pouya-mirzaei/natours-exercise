@@ -1,0 +1,49 @@
+.form {
+    &__group {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__text-input {
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        width: 80%;
+        padding: 1rem 1.2rem;
+        border-bottom: 3px solid $color-white;
+        border-top: 3px solid $color-white;
+        transition: all 0.5s;
+
+        &:focus {
+            box-shadow: $btn-boxshadow-value;
+        }
+
+        &:not(:placeholder-shown) + label {
+            top: 120%;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-secondary-dark;
+        }
+        &:focus:valid {
+            border-bottom: 3px solid $color-primary-light;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $text-color-gray-2;
+        }
+    }
+
+    label {
+        position: absolute;
+        left: 5%;
+        z-index: -5;
+        top: 25%;
+        font-size: 0.7 * $primary-fs;
+        font-weight: 600;
+        transition: all 0.2s;
+    }
+}

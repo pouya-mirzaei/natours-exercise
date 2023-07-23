@@ -1,0 +1,26 @@
+.booking {
+    height: 33rem;
+    box-shadow: $btn-boxshadow-value;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+
+    &__bg-img {
+        position: absolute;
+        inset: 0;
+        background-image: url("../img/nat-10.jpg");
+        background-size: cover;
+        width: 100%;
+        z-index: 2;
+    }
+
+    &__info {
+        position: absolute;
+        inset: 0;
+        width: 55%;
+        z-index: 3;
+        padding: 5rem 4rem;
+        background-color: rgba($color-white, 0.9);
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+    }
+}
