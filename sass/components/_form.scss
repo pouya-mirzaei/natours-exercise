@@ -3,16 +3,19 @@
         position: relative;
 
         &:not(:last-child) {
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
     }
 
     &__text-input {
+        display: block;
+        position: relative;
         border: none;
         outline: none;
         border-radius: 3px;
         width: 80%;
         padding: 1rem 1.2rem;
+        z-index: 2;
         border-bottom: 3px solid $color-white;
         border-top: 3px solid $color-white;
         transition: all 0.5s;
@@ -22,10 +25,10 @@
         }
 
         &:not(:placeholder-shown) + label {
-            top: 120%;
+            transform: translate(1rem, 0);
         }
 
-        &:focus:invalid {
+        &:invalid {
             border-bottom: 3px solid $color-secondary-dark;
         }
         &:focus:valid {
@@ -37,13 +40,54 @@
         }
     }
 
-    label {
-        position: absolute;
-        left: 5%;
-        z-index: -5;
-        top: 25%;
+    &__radio-input {
+        transform: translate(-100rem, -5rem);
+
+        &:checked + .label-radio .label-radio__btn::before {
+            display: block;
+        }
+    }
+
+    .label {
+        position: relative;
+        display: inline-block;
         font-size: 0.7 * $primary-fs;
         font-weight: 600;
-        transition: all 0.2s;
+        transform: translate(1.2rem, -2.3rem);
+        z-index: 1;
+        transition: all 0.5s;
+    }
+
+    .label-radio {
+        display: inline-block;
+        width: 45%;
+        transform: translate(0, 0);
+        font-size: $primary-fs;
+        font-weight: 200;
+        cursor: pointer;
+        position: relative;
+
+        &__btn {
+            display: inline-block;
+            width: 1.75rem;
+            height: 1.75rem;
+            border-radius: 50%;
+            border: 5px solid $color-primary-medium;
+            transform: translate(-0.5rem, 0.5rem);
+            position: relative;
+
+            &::before {
+                content: "";
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 0.75rem;
+                height: 0.75rem;
+                background-color: $color-primary-medium;
+                border-radius: inherit;
+            }
+        }
     }
 }
