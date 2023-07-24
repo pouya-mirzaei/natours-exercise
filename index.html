@@ -308,53 +308,93 @@
             </section>
 
             <section class="booking-section">
-                <div class="booking">
-                    <div class="booking__bg-img"></div>
-                    <div class="booking__info">
-                        <h2 class="heading-secondary">start booking now</h2>
-                        <form class="form u-margin-top-medium">
-                            <div class="form__group">
-                                <input type="text" class="form__text-input" placeholder="Full Name" id="full-name" />
-                                <label class="label" for="full-name">Full name</label>
-                            </div>
-                            <div class="form__group">
-                                <input type="email" class="form__text-input" placeholder="Email address" id="Email" />
-                                <label class="label" for="Email">Email address</label>
-                            </div>
+                <div class="row">
+                    <div class="booking">
+                        <div class="booking__bg-img"></div>
+                        <div class="booking__info">
+                            <h2 class="heading-secondary">start booking now</h2>
+                            <form class="form u-margin-top-medium">
+                                <div class="form__group">
+                                    <input
+                                        type="text"
+                                        class="form__text-input"
+                                        placeholder="Full Name"
+                                        id="full-name"
+                                    />
+                                    <label class="label" for="full-name">Full name</label>
+                                </div>
+                                <div class="form__group">
+                                    <input
+                                        type="email"
+                                        class="form__text-input"
+                                        placeholder="Email address"
+                                        id="Email"
+                                    />
+                                    <label class="label" for="Email">Email address</label>
+                                </div>
 
-                            <div class="form__group">
-                                <input
-                                    type="radio"
-                                    class="form__radio-input"
-                                    id="small"
-                                    value="Small tour group"
-                                    name="group"
-                                />
-                                <label class="label label-radio" for="small">
-                                    <span class="label-radio__btn"></span>
-                                    Small tour group
-                                </label>
+                                <div class="form__group">
+                                    <input
+                                        type="radio"
+                                        class="form__radio-input"
+                                        id="small"
+                                        value="Small tour group"
+                                        name="group"
+                                    />
+                                    <label class="label label-radio" for="small">
+                                        <span class="label-radio__btn"></span>
+                                        Small tour group
+                                    </label>
 
-                                <input
-                                    type="radio"
-                                    class="form__radio-input"
-                                    id="large"
-                                    value="Large tour group"
-                                    name="group"
-                                />
-                                <label class="label label-radio" for="large">
-                                    <span class="label-radio__btn"></span>
-                                    Lrage tour group
-                                </label>
-                            </div>
+                                    <input
+                                        type="radio"
+                                        class="form__radio-input"
+                                        id="large"
+                                        value="Large tour group"
+                                        name="group"
+                                    />
+                                    <label class="label label-radio" for="large">
+                                        <span class="label-radio__btn"></span>
+                                        Lrage tour group
+                                    </label>
+                                </div>
 
-                            <div class="form__group">
-                                <button type="submit" class="btn btn--green">next step</button>
-                            </div>
-                        </form>
+                                <div class="form__group">
+                                    <button type="submit" class="btn btn--green">next step</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
+
+        <footer class="footer">
+            <div class="footer__logo u-center-text u-margin-bottom-big">
+                <img src="img/logo-green-1x.png" alt="" />
+            </div>
+            <div class="row">
+                <div class="grid__column column-1-of-2">
+                    <div class="footer__links">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="link">Company</a></li>
+                            <li class="footer__item"><a href="#" class="link">Contact us</a></li>
+                            <li class="footer__item"><a href="#" class="link">Carrees</a></li>
+                            <li class="footer__item"><a href="#" class="link">Privacy policy</a></li>
+                            <li class="footer__item"><a href="#" class="link">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid__column column-1-of-2">
+                    <div class="footer__copyright">
+                        Built by <a href="#" class="link">JONAS SCHMEDTMANN</a> for his online course
+                        <a href="#" class="link">ADVANCED CSS AND SASS</a>. Copyright © by Jonas Schmedtmann. You are
+                        100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as
+                        your own design. A credit to the original author, Jonas Schmedtmann, is of course highly
+                        appreciated!
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

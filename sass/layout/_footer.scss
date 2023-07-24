@@ -1,0 +1,30 @@
+.footer {
+    padding: 8rem 0;
+    background-color: #333;
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 0.6rem;
+        }
+    }
+
+    &__links {
+        border-top: 1px solid #777;
+        padding: 1.5rem 0;
+        display: inline-block;
+    }
+
+    &__copyright {
+        padding: 1.5rem 0;
+        border-top: 1px solid #777;
+        color: $bg-color-light;
+        width: 80%;
+        float: right;
+    }
+}

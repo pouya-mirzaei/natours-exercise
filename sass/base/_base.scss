@@ -17,6 +17,13 @@ body {
     color: $text-color-gray;
     box-sizing: border-box;
 }
+
 .material-symbols-outlined {
     font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 48;
+}
+
+a:link,
+a:visited {
+    display: inline-block;
+    text-decoration: none;
 }

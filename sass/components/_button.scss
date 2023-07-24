@@ -78,3 +78,18 @@
 
     @include btn-click-effect;
 }
+
+.link {
+    display: inline-block;
+    color: $bg-color-light;
+    text-transform: uppercase;
+    font-size: 0.85 * $primary-fs;
+    backface-visibility: hidden;
+    transition: all 0.2s;
+    padding: 0.2rem;
+    &:hover {
+        color: $color-primary-medium;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8);
+        transform: rotate(5deg) scale(1.2);
+    }
+}
