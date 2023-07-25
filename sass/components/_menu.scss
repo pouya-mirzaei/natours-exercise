@@ -11,7 +11,7 @@
         border-radius: 50%;
         z-index: 2000;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
-        transition: all 0.5s cubic-bezier(1, 0, 0.4, 1.13);
+        transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     }
 
     &__checkbox {
@@ -19,7 +19,7 @@
     }
 
     &__checkbox:checked ~ &__background {
-        transform: scale(60);
+        transform: scale(50);
     }
 
     &__checkbox--label {
@@ -53,7 +53,7 @@
             content: "";
             position: absolute;
             left: 0;
-            transition: all 0.1s;
+            transition: all 0.2s;
         }
 
         &::before {
@@ -69,5 +69,67 @@
     }
     &__checkbox--label:hover &__hamburger::after {
         top: 0.6rem;
+    }
+
+    &__checkbox:checked + &__checkbox--label &__hamburger {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__checkbox--label &__hamburger::before {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+    &__checkbox:checked + &__checkbox--label &__hamburger::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__navigation {
+        position: fixed;
+        z-index: 5000;
+        top: 50%;
+        left: 0;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: all 0.8s cubic-bezier(0.25, 0.1, 0.49, 1.57);
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        font-weight: 100;
+        margin: 0.6rem;
+
+        span {
+            margin-right: 1rem;
+        }
+    }
+    &__link {
+        &:link,
+        &:visited {
+            font-size: 2 * $primary-fs;
+            color: $color-white;
+            padding: 0.7rem 1rem;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+            background-size: 220%;
+            text-transform: uppercase;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $color-primary-dark;
+            transform: translateX(1rem);
+        }
+    }
+
+    &__checkbox:checked ~ &__navigation {
+        opacity: 1;
+        left: 50%;
     }
 }
