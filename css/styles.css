@@ -475,6 +475,57 @@ a:visited {
       background-color: #55c57a;
       border-radius: inherit; }
 
+.menu {
+  position: absolute;
+  z-index: 1000; }
+  .menu__background {
+    position: fixed;
+    top: 3.75rem;
+    right: 3.75rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    z-index: 2000;
+    background-image: radial-gradient(#7ed56f, #28b485);
+    transition: all 0.5s cubic-bezier(1, 0, 0.4, 1.13); }
+  .menu__checkbox {
+    display: none; }
+  .menu__checkbox:checked ~ .menu__background {
+    transform: scale(60); }
+  .menu__checkbox--label {
+    display: inline-block;
+    position: fixed;
+    top: 3.5rem;
+    right: 3.5rem;
+    z-index: 3000;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0.6rem 2rem rgba(0, 0, 0, 0.1); }
+  .menu__hamburger {
+    position: relative;
+    transform: translate(1.25rem, 1.5rem); }
+    .menu__hamburger, .menu__hamburger::before, .menu__hamburger::after {
+      display: inline-block;
+      width: 2rem;
+      height: 2px;
+      background-color: #333; }
+    .menu__hamburger::before, .menu__hamburger::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.1s; }
+    .menu__hamburger::before {
+      top: -0.5rem; }
+    .menu__hamburger::after {
+      top: 0.5rem; }
+  .menu__checkbox--label:hover .menu__hamburger::before {
+    top: -0.6rem; }
+  .menu__checkbox--label:hover .menu__hamburger::after {
+    top: 0.6rem; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
