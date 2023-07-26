@@ -91,6 +91,7 @@
         top: 50%;
         left: 0;
         opacity: 0;
+        visibility: hidden;
         transform: translate(-50%, -50%);
         transition: all 0.8s cubic-bezier(0.25, 0.1, 0.49, 1.57);
     }
@@ -130,6 +131,7 @@
 
     &__checkbox:checked ~ &__navigation {
         opacity: 1;
+        visibility: visible;
         left: 50%;
     }
 }
