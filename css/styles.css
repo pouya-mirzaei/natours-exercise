@@ -10,7 +10,7 @@ html {
   @media (max-width: 75em) {
     html {
       font-size: 85%; } }
-  @media (max-width: 56.25em) {
+  @media (max-width: 59.5em) {
     html {
       font-size: 65%; } }
   @media (min-width: 112.5em) {
@@ -19,11 +19,11 @@ html {
 
 body {
   padding: 1.25rem;
-  font-family: sans-serif;
+  font-family: sans-serif, "Times New Roman", Times, serif;
   font-size: 1rem;
   color: #777;
   box-sizing: border-box; }
-  @media (max-width: 56.25em) {
+  @media (max-width: 59.5em) {
     body {
       padding: 0; } }
 
@@ -64,7 +64,8 @@ a:visited {
     opacity: 1; } }
 
 .heading-primary {
-  color: #fff; }
+  color: #fff;
+  width: 100%; }
   .heading-primary--main {
     display: block;
     font-size: 3.75rem;
@@ -72,6 +73,12 @@ a:visited {
     font-weight: 400;
     margin-bottom: 1.25rem;
     animation: left-to-right 0.65s ease-out; }
+    @media (max-width: 59.5em) {
+      .heading-primary--main {
+        letter-spacing: 1.5rem; } }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 1.25rem;
@@ -79,6 +86,13 @@ a:visited {
     font-weight: 300;
     margin-bottom: 4rem;
     animation: right-to-left 0.65s ease-out; }
+    @media (max-width: 59.5em) {
+      .heading-primary--sub {
+        letter-spacing: 1.5rem; } }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        margin-top: 2rem;
+        letter-spacing: 0.5rem; } }
 
 .heading-secondary {
   font-size: 2.2rem;
@@ -153,6 +167,7 @@ a:visited {
   margin-top: 10.5rem; }
 
 .btn {
+  display: inline-block;
   text-transform: uppercase;
   border: none;
   border-radius: 4.5rem;
@@ -162,6 +177,10 @@ a:visited {
   outline: none;
   transition: all 0.2s;
   position: relative; }
+  @media (max-width: 37.5em) {
+    .btn {
+      font-size: 1.5rem !important;
+      padding: 2rem 3rem; } }
   .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2); }
@@ -188,7 +207,8 @@ a:visited {
 
 .btn--white {
   background-color: #fff;
-  color: #777; }
+  color: #777;
+  font-size: 1rem; }
   .btn--white::before {
     background-color: #fff; }
 
@@ -500,6 +520,14 @@ a:visited {
     z-index: 2000;
     background-image: radial-gradient(#7ed56f, #28b485);
     transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+    @media (max-width: 59.5em) {
+      .menu__background {
+        top: 2.25rem;
+        right: 2.25rem; } }
+    @media (max-width: 37.5em) {
+      .menu__background {
+        top: 2rem;
+        right: 2rem; } }
   .menu__checkbox {
     display: none; }
   .menu__checkbox:checked ~ .menu__background {
@@ -516,6 +544,14 @@ a:visited {
     background-color: #fff;
     cursor: pointer;
     box-shadow: 0 0.6rem 2rem rgba(0, 0, 0, 0.1); }
+    @media (max-width: 59.5em) {
+      .menu__checkbox--label {
+        top: 2rem;
+        right: 2rem; } }
+    @media (max-width: 37.5em) {
+      .menu__checkbox--label {
+        top: 1.5rem;
+        right: 1.75rem; } }
   .menu__hamburger {
     position: relative;
     transform: translate(1.25rem, 1.5rem); }
@@ -587,6 +623,9 @@ a:visited {
   clip-path: polygon(0 0, 100% 0, 100% 79vh, 0 100%);
   position: relative;
   z-index: 10; }
+  @media (max-width: 37.5em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     left: 2.1875rem;
@@ -604,28 +643,38 @@ a:visited {
 .row {
   max-width: 72.5rem;
   margin: 0 auto; }
+  @media (max-width: 59.5em) {
+    .row {
+      padding: 1.5rem;
+      max-width: 50rem; } }
   .row::after {
     content: "";
     display: table;
     clear: both; }
   .row:not(:last-child) {
-    margin-bottom: 5rem; }
+    margin-bottom: 6rem; }
   .row .grid__column {
     float: left; }
     .row .grid__column:not(:last-child) {
-      margin-right: 4rem; }
+      margin-right: 3rem; }
+      @media (max-width: 59.5em) {
+        .row .grid__column:not(:last-child) {
+          margin-bottom: 6rem; } }
+    @media (max-width: 59.5em) {
+      .row .grid__column {
+        width: 100% !important; } }
   .row .column-1-of-2 {
-    width: calc((100% - 4rem) / 2); }
+    width: calc((100% - 3rem) / 2); }
   .row .column-1-of-3 {
-    width: calc((100% - 2 *4rem) / 3); }
+    width: calc((100% - 2 *3rem) / 3); }
   .row .column-2-of-3 {
-    width: calc(100% - (4rem + (100% - 2 * (4rem)) / 3)); }
+    width: calc(100% - (3rem + (100% - 2 * (3rem)) / 3)); }
   .row .column-1-of-4 {
-    width: calc((100% - 3 *4rem) / 4); }
+    width: calc((100% - 3 *3rem) / 4); }
   .row .column-2-of-4 {
-    width: calc(100% - ((2 * (100% - 3 *4rem) / 4) + (2 *4rem))); }
+    width: calc(100% - ((2 * (100% - 3 *3rem) / 4) + (2 *3rem))); }
   .row .column-3-of-4 {
-    width: calc(100% - (((100% - 3 *4rem) / 4) + (4rem))); }
+    width: calc(100% - (((100% - 3 *3rem) / 4) + (3rem))); }
 
 .footer {
   padding: 8rem 0;
@@ -640,12 +689,22 @@ a:visited {
     border-top: 1px solid #777;
     padding: 1.5rem 0;
     display: inline-block; }
+    @media (max-width: 59.5em) {
+      .footer__links {
+        width: 100%;
+        float: none;
+        text-align: center; } }
   .footer__copyright {
     padding: 1.5rem 0;
     border-top: 1px solid #777;
     color: #f7f7f7;
     width: 80%;
     float: right; }
+    @media (max-width: 59.5em) {
+      .footer__copyright {
+        width: 100%;
+        float: none;
+        text-align: center; } }
 
 .about-section {
   background-color: #f7f7f7;
@@ -659,20 +718,29 @@ a:visited {
   position: relative;
   z-index: 2;
   text-align: center;
-  transform: skewY(-5.5deg) translateY(-10rem); }
+  transform: skewY(-5.5deg) translateY(-30vh); }
+  @media (max-width: 37.5em) {
+    .features-section {
+      transform: skewY(-5.5deg) translateY(-18vh); } }
   .features-section > * {
     transform: skewY(5.5deg); }
 
 .tours-section {
   background-color: #f7f7f7;
   padding: 8rem 0;
-  transform: translateY(-14rem);
+  transform: translateY(-41vh);
   z-index: 20; }
+  @media (max-width: 37.5em) {
+    .tours-section {
+      transform: translateY(-21vh); } }
 
 .stories-section {
   position: relative;
   padding: 8rem 0;
-  margin-top: -14rem; }
+  margin-top: -41vh; }
+  @media (max-width: 37.5em) {
+    .stories-section {
+      margin-top: -25vh; } }
 
 .booking-section {
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);

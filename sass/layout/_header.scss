@@ -5,8 +5,14 @@
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 79vh, 0 100%);
+
+    @include responsive(phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
     position: relative;
     z-index: 10;
+
     &__logo-box {
         position: absolute;
         left: 2.1875rem;

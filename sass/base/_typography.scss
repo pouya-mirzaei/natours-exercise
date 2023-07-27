@@ -1,10 +1,18 @@
 .heading-primary {
     color: $color-white;
+    width: 100%;
 
     &--main {
         display: block;
         font-size: 3.75rem;
         letter-spacing: 2.1875rem;
+
+        @include responsive(tab-port) {
+            letter-spacing: 1.5rem;
+        }
+        @include responsive(phone) {
+            letter-spacing: 1rem;
+        }
         font-weight: 400;
         margin-bottom: 1.25rem;
         animation: left-to-right 0.65s ease-out;
@@ -14,6 +22,15 @@
         display: block;
         font-size: 1.25rem;
         letter-spacing: 1rem;
+
+        @include responsive(tab-port) {
+            letter-spacing: 1.5rem;
+        }
+        @include responsive(phone) {
+            margin-top: 2rem;
+            letter-spacing: 0.5rem;
+        }
+
         font-weight: 300;
         margin-bottom: 4rem;
 
@@ -23,6 +40,10 @@
 
 .heading-secondary {
     font-size: 2.2 * $primary-fs;
+
+    @include responsive(phone) {
+    }
+
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2.5px;

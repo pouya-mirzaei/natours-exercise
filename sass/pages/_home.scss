@@ -12,7 +12,12 @@
     position: relative;
     z-index: 2;
     text-align: center;
-    transform: skewY(-5.5deg) translateY(-10rem);
+    transform: skewY(-5.5deg) translateY(-30vh);
+
+    @include responsive(phone) {
+        transform: skewY(-5.5deg) translateY(-18vh);
+    }
+
     & > * {
         transform: skewY(5.5deg);
     }
@@ -21,14 +26,22 @@
 .tours-section {
     background-color: $bg-color-light;
     padding: 8rem 0;
-    transform: translateY(-14rem);
+    transform: translateY(-41vh);
+    @include responsive(phone) {
+        transform: translateY(-21vh);
+    }
+
     z-index: 20;
 }
 
 .stories-section {
     position: relative;
     padding: 8rem 0;
-    margin-top: -14rem;
+    margin-top: -41vh;
+
+    @include responsive(phone) {
+        margin-top: -25vh;
+    }
 }
 
 .booking-section {

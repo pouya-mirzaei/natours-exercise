@@ -18,6 +18,12 @@
         border-top: 1px solid #777;
         padding: 1.5rem 0;
         display: inline-block;
+
+        @include responsive(tab-port) {
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
     }
 
     &__copyright {
@@ -26,5 +32,11 @@
         color: $bg-color-light;
         width: 80%;
         float: right;
+
+        @include responsive(tab-port) {
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
     }
 }
