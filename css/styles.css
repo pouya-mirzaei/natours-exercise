@@ -7,6 +7,15 @@
 
 html {
   font-size: 100%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 85%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 65%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 130%; } }
 
 body {
   padding: 1.25rem;
@@ -14,6 +23,9 @@ body {
   font-size: 1rem;
   color: #777;
   box-sizing: border-box; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 48; }
@@ -491,7 +503,7 @@ a:visited {
   .menu__checkbox {
     display: none; }
   .menu__checkbox:checked ~ .menu__background {
-    transform: scale(50); }
+    transform: scale(60); }
   .menu__checkbox--label {
     display: inline-block;
     position: fixed;

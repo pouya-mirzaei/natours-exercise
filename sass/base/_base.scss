@@ -8,10 +8,26 @@
 
 html {
     font-size: 100%;
+
+    @include responsive(tab-lan) {
+        font-size: 85%;
+    }
+    @include responsive(tab-port) {
+        font-size: 65%;
+    }
+
+    @include responsive(big) {
+        font-size: 130%;
+    }
 }
 
 body {
     padding: 1.25rem;
+
+    @include responsive(tab-port) {
+        padding: 0;
+    }
+
     font-family: sans-serif;
     font-size: 1rem;
     color: $text-color-gray;
