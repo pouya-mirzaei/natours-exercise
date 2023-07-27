@@ -4,7 +4,7 @@
 
     @include responsive(tab-port) {
         padding: 1.5rem;
-        max-width: 50rem;
+        max-width: 60rem;
     }
 
     @include clearfix;

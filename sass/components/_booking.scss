@@ -1,5 +1,6 @@
 .booking {
-    height: 33rem;
+    display: inline-block;
+    width: 100%;
     box-shadow: $btn-boxshadow-value;
     border-radius: 3px;
     position: relative;
@@ -15,12 +16,20 @@
     }
 
     &__info {
-        position: absolute;
+        position: relative;
         inset: 0;
         width: 55%;
         z-index: 3;
         padding: 5rem 4rem;
         background-color: rgba($color-white, 0.9);
         clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+
+        @include responsive(tab-lan) {
+            width: 75%;
+        }
+        @include responsive(tab-port) {
+            width: 100%;
+            clip-path: none;
+        }
     }
 }

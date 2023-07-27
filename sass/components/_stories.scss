@@ -8,6 +8,16 @@
     transform: skewX(-7deg);
     box-shadow: $btn-boxshadow-value;
 
+    @include responsive(tab-port) {
+        width: 90%;
+        font-size: 1.75 * $primary-fs;
+    }
+
+    @include responsive(phone) {
+        width: 95%;
+        transform: skew(0);
+    }
+
     &__shape {
         position: relative;
         width: 9.5rem;
@@ -55,5 +65,9 @@
 
     & > * {
         transform: skewX(7deg);
+
+        @include responsive(phone) {
+            transform: skewX(0);
+        }
     }
 }

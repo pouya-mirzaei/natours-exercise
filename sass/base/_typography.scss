@@ -41,9 +41,6 @@
 .heading-secondary {
     font-size: 2.2 * $primary-fs;
 
-    @include responsive(phone) {
-    }
-
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -64,6 +61,15 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
+
+    @include responsive(tab-port) {
+        font-size: 1.75 * $primary-fs;
+        font-weight: 600;
+    }
+    @include responsive(phone) {
+        font-size: 1.5 * $primary-fs;
+        font-weight: 600;
+    }
 }
 
 .heading-card {
@@ -109,8 +115,15 @@
 
 .paragraph {
     font-size: 0.95 * $primary-fs;
-    // letter-spacing: 1px;
+    line-height: 2rem;
     &:not(:last-child) {
         margin-bottom: 2.5rem;
+    }
+
+    @include responsive(tab-port) {
+        font-size: 1.5 * $primary-fs;
+    }
+    @include responsive(phone) {
+        font-size: 1.3 * $primary-fs;
     }
 }

@@ -50,10 +50,6 @@
     color: $text-color-gray;
     font-size: $primary-fs;
 
-    @include responsive(phone) {
-        // margin-top: 10rem;
-    }
-
     &::before {
         background-color: $color-white;
     }
@@ -79,6 +75,10 @@
     border-bottom: 1px solid $color-primary-dark;
     cursor: pointer;
     transition: all 0.3s;
+
+    @include responsive(tab-port) {
+        font-size: 1.5 * $primary-fs !important;
+    }
 
     &:hover {
         color: $color-white;

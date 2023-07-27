@@ -2,6 +2,10 @@
     &__group {
         position: relative;
 
+        @include responsive(phone) {
+            text-align: center;
+        }
+
         &:not(:last-child) {
             margin-bottom: 2rem;
         }
@@ -19,6 +23,10 @@
         border-bottom: 3px solid $color-white;
         border-top: 3px solid $color-white;
         transition: all 0.5s;
+
+        @include responsive(tab-port) {
+            width: 100%;
+        }
 
         &:focus {
             box-shadow: $btn-boxshadow-value;
@@ -43,6 +51,10 @@
     &__radio-input {
         transform: translate(-100rem, -5rem);
 
+        @include responsive(tab-port) {
+            display: block;
+        }
+
         &:checked + .label-radio .label-radio__btn::before {
             display: block;
         }
@@ -66,6 +78,10 @@
         font-weight: 200;
         cursor: pointer;
         position: relative;
+
+        @include responsive(tab-port) {
+            display: block;
+        }
 
         &__btn {
             display: inline-block;
