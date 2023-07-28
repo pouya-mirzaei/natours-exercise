@@ -116,9 +116,10 @@
     }
 
     @include responsive(tab-port) {
-        font-size: 1.5 * $primary-fs;
+        font-size: 1.7 * $primary-fs;
+        line-height: 2.5rem;
     }
     @include responsive(phone) {
-        font-size: 1.3 * $primary-fs;
+        font-size: 1.7 * $primary-fs;
     }
 }

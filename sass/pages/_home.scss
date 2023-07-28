@@ -37,11 +37,14 @@
     background-color: $bg-color-light;
     padding: 8rem 0;
     transform: translateY(-41vh);
+
+    @include responsive(tab-lan) {
+        transform: translateY(-37vh);
+    }
+
     @include responsive(phone) {
         transform: translateY(-21vh);
     }
-
-    z-index: 20;
 }
 
 .stories-section {

@@ -6,10 +6,10 @@
 
     @include responsive(tab-port) {
         padding: 1.5rem;
-        max-width: 60rem;
+        max-width: 55rem;
     }
     @include responsive(phone) {
-        max-width: 35rem;
+        max-width: 40rem;
     }
 
     &:not(:last-child) {
