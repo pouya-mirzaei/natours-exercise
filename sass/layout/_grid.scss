@@ -2,12 +2,15 @@
     max-width: 72.5rem;
     margin: 0 auto;
 
+    @include clearfix;
+
     @include responsive(tab-port) {
         padding: 1.5rem;
         max-width: 60rem;
     }
-
-    @include clearfix;
+    @include responsive(phone) {
+        max-width: 35rem;
+    }
 
     &:not(:last-child) {
         margin-bottom: $vertical-gap;

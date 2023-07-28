@@ -74,19 +74,14 @@
 
 .heading-card {
     text-transform: uppercase;
-    position: absolute;
-    top: 20%;
-    right: 5%;
     width: 75%;
-    height: 12rem;
     font-size: 2 * $primary-fs;
     color: $color-white;
     text-align: right;
     font-weight: 300;
-
     &__span {
         padding: 0.5rem 1rem;
-        -webkit-box-decoration-break: clone;
+        -webkit-box-decoration-break: c + lone;
         box-decoration-break: clone;
         height: 100%;
         &--1 {
