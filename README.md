@@ -1,3 +1,5 @@
 # natours app
 
-an exercise project for testing purposes
+## An exercise project for testing purposes
+
+### You can check the demo from [here](https://pouya-mirzaei.github.io/natours-exercise/)
